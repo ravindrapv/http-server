@@ -5,6 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
+
   const path = parsedUrl.pathname;
   const delayMatch = path.match(/^\/delay\/(\d+)$/);
   const statusMatch = path.match(/^\/status\/(\d+)$/);
